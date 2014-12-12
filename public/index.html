@@ -52,21 +52,11 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-    <div id="series">
-
+    <div class="container-fluid">
+      <div id="graph">
+        <div id="legend"></div>
+      </div>
     </div>
-
-    <div id="graph">
-      <div id="legend"></div>
-    </div>
-
-    <script id="series-template" type="text/x-handlebars/template">
-      <ul>
-        {{#each series}}
-          <li>{{name}}</li>
-        {{/each}}
-      </ul>
-    </script>
 
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="bower_components/handlebars/handlebars.min.js"></script>

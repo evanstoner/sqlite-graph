@@ -9,12 +9,21 @@ var yAxis;
 var palette = new Rickshaw.Color.Palette();
 
 $(function() {
-  width = $(window).width();
-  height = $(window).height() - 200;
-
   $('#database').change(databaseChanged);
   $('#table').change(tableChanged);
   $('#addSeries').click(addSeries);
+
+  $(window).resize(function() {
+    console.log('resize;');
+    width = $(window).width() - 30;
+    height = $(window).height() - $('nav').first().height() - 45;
+    if (graph) {
+      graph.width = width;
+      graph.height = height;
+      graph.update();
+    }
+  });
+  $(window).resize();
 
   $.getJSON('api/', function(data) {
     populateSelect('#database', data.databases);
