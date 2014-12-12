@@ -1,35 +1,56 @@
 <html>
   <head>
     <title>sqlite-graph</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="bower_components/rickshaw/rickshaw.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/vis.css">
   </head>
   <body>
-    <div class="banner">
-      <h1>sqlite-graph</h1>
-      <div class="banner-buttons">
-        Database
-        <select name="database" id="database">
-        </select>
 
-        Table
-        <select name="table" id="table">
-        </select>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">sqlite-graph</a>
+        </div>
 
-        X
-        <select name="fieldX" id="fieldX">
-        </select>
-
-        Y
-        <select name="fieldY" id="fieldY">
-        </select>
-
-        <button id="addSeries">Add</button>
-      </div>
-      <div style="clear:both"></div>
-    </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              Database
+              <select name="database" id="database" class="form-control">
+              </select>
+            </div>
+            <div class="form-group">
+              Table
+              <select name="table" id="table" class="form-control">
+              </select>
+            </div>
+            <div class="form-group">
+              X
+              <select name="fieldX" id="fieldX" class="form-control">
+              </select>
+            </div>
+            <div class="form-group">
+              Y
+              <select name="fieldY" id="fieldY" class="form-control">
+              </select>
+            </div>
+            <button id="addSeries" class="btn btn-primary">Add</button>
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
 
     <div id="series">
 

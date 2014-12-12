@@ -6,7 +6,7 @@ var series = [];
 var graph;
 var xAxis;
 var yAxis;
-var palette = new Rickshaw.Color.Palette();;
+var palette = new Rickshaw.Color.Palette();
 
 $(function() {
   width = $(window).width();
@@ -52,7 +52,8 @@ function tableChanged() {
   });
 }
 
-function addSeries() {
+function addSeries(e) {
+  e.preventDefault(); // this button is within a form
   var db = $('#database').val();
   var table = $('#table').val();
   var x = $('#fieldX').val();
