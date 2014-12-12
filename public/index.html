@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>sqlite-graph</title>
+    <link rel="stylesheet" href="bower_components/rickshaw/rickshaw.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/vis.css">
+  </head>
+  <body>
+    <div class="banner">
+      <h1>sqlite-graph</h1>
+      <div class="banner-buttons">
+        Database
+        <select name="database" id="database">
+        </select>
+
+        Table
+        <select name="table" id="table">
+        </select>
+
+        X
+        <select name="fieldX" id="fieldX">
+        </select>
+
+        Y
+        <select name="fieldY" id="fieldY">
+        </select>
+
+        <button id="addSeries">Add</button>
+      </div>
+      <div style="clear:both"></div>
+    </div>
+
+    <div id="series">
+
+    </div>
+
+    <div id="graph">
+      <div id="legend"></div>
+    </div>
+
+    <script id="series-template" type="text/x-handlebars/template">
+      <ul>
+        {{#each series}}
+          <li>{{name}}</li>
+        {{/each}}
+      </ul>
+    </script>
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/handlebars/handlebars.min.js"></script>
+    <script type="text/javascript" src="bower_components/d3/d3.min.js"></script>
+    <script type="text/javascript" src="bower_components/rickshaw/rickshaw.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

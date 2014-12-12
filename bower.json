@@ -1,0 +1,22 @@
+{
+  "name": "uprightnow",
+  "version": "0.0.0",
+  "main": "public/index.html",
+  "authors": [
+    "Evan Stoner"
+  ],
+  "license": "MIT",
+  "homepage": "evanstoner.net",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "rickshaw": "~1.5.0",
+    "handlebars": "~2.0.0"
+  }
+}
